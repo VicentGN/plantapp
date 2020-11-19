@@ -18,15 +18,17 @@ Pasos a seguir
      cd directorio_local
      git clone https://github.com/VicentGN/plantapp
      ``` 
-  2. Accede al directorio que almacena el backend de la app y carga las dependencias
+  2. Accede al directorio que almacena el backend de la app y carga las dependencias. Arranca el servidor NodeJS.
       ```
       cd plantapp/back
       npm i 
+      npm run dev
       ```
-  3. Después vuelve a hacer lo mismo pero en el directorio front
+  3. Después vuelve a hacer lo mismo pero en el directorio front. Arranca ReactJS
       ```
       cd plantapp/front
       npm i
+      npm run serve
       ```
   4. Abre el navegador y accede al localhost para visualizar la app
 
