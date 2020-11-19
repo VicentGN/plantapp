@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Configuracion básica
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 5000);
 
 
 // Middlewares
