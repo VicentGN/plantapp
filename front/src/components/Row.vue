@@ -1,11 +1,8 @@
 <template>
   <md-table-row>
-    <md-table-cell>{{ planta.id_plant }}</md-table-cell>
     <md-table-cell>{{ planta.name }}</md-table-cell>
     <md-table-cell>{{ planta.sample }}</md-table-cell>
     <md-table-cell class="fecha">{{ formatDate() }}</md-table-cell>
-    <!-- <md-table-cell>{{ planta.legiti_dni }}</md-table-cell>
-    <md-table-cell>{{ planta.determini_dni }}</md-table-cell> -->
     <md-table-cell>{{ planta.habitat }}</md-table-cell>
     <md-table-cell>
       <md-icon v-on:click.native="edit()">edit</md-icon>
@@ -33,7 +30,7 @@ export default {
       this.borrarActivado = false;
     },
     edit: function() {
-      this.$router.push({name: 'FormEdit', params: {id: this.planta.id_plant }})
+      this.$router.push({name: 'FormEdit', params: {id: this.planta._id }})
     },
     formatDate: function() {
       return moment(this.planta.date).format('DD-MM-YYYY');

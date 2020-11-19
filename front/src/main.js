@@ -21,8 +21,14 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-new Vue({
+const options = {
   router,
-  render: h => h(App)
-}).$mount('#app')
+  render: function(createElement) {
+    return createElement(App);
+  }
+}
+
+const app = new Vue(options)
+app.$mount('#app');
+
 

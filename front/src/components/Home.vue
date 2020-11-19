@@ -18,7 +18,7 @@ export default {};
 <style lang="scss" scoped>
   .img-container{
     margin: auto;
-    width: 800px;
+    width: 600px;
     img {
       width: 100%;
           border-radius: 100px;

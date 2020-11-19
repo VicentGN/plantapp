@@ -9,18 +9,15 @@
       ></md-progress-spinner>
       <md-table v-else>
         <md-table-row>
-          <md-table-head>ID</md-table-head>
           <md-table-head>Nombre</md-table-head>
           <md-table-head>Muestra</md-table-head>
           <md-table-head>Fecha</md-table-head>
-          <!-- <md-table-head>Recolector</md-table-head>
-          <md-table-head>Identificador</md-table-head> -->
           <md-table-head>Habitat</md-table-head>
           <md-table-head>Acciones</md-table-head>
         </md-table-row>
         <Row
           v-for="planta in plantas"
-          :key="planta.id_plant"
+          :key="planta._id"
           :planta="planta"
         />
       </md-table>
@@ -49,7 +46,7 @@ export default {
   methods: {
     getData: function () {
       axios
-        .get("http://localhost:4000/api/plants")
+        .get("http://localhost:5000/api/plants")
         .then((resolve) => 
           this.plantas = resolve.data,          
           this.stopLoading())

@@ -22,17 +22,18 @@
     }),
     methods: {
       onConfirm () {
-        axios.put('http://localhost:4000/api/plants/del', {id_plant: this.planta.id_plant})
-         .then(resolve => console.log(resolve.data))
-         .catch(error => console.log(error))
-        this.showDialog = false;
-
+        axios.delete('http://localhost:5000/api/plants/' + this.planta._id)
+          .then((resolve )=>
+          this.$parent.$data.plantas = this.$parent.$data.plantas.filter(planta => planta._id != resolve.data._id),      
+          this.showDialog =  false
+          )
+          .catch((error) => alert(error.response.data.message))
       },
       onCancel () {
         this.showDialog = false;
       }
     },
-    created: function() {
+    mounted: function() {
       // Recibe la planta a borrar que la fila le pasa por el bus de comunicaciones
       EventBus.$on('borrarPlanta', (planta) => {
         this.planta = planta,
