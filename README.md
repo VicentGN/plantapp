@@ -1,6 +1,6 @@
 # PlantApp
 
-PlantaApp es la aplicación que te permite registrar aquellas especies vegetales en tus trabajos de campo. Si eres geógrafo, biólogo, ambientólogo o cualquier otra ciencia que trabaje en el campo de la taxonomía vegetal, esta es tu aplicación
+PlantaApp es la aplicación que te permite registrar aquellas especies vegetales en tus trabajos de campo. Si eres geógrafo, biólogo, ambientólogo o cualquier otra ciencia que trabaje en el campo de la taxonomía vegetal, esta es tu aplicación.
 
 ## Requisitos previos
 Las siguientes aplicaciones deben estar instaladas en el ordenador:
@@ -12,25 +12,25 @@ Las siguientes aplicaciones deben estar instaladas en el ordenador:
 
 Pasos a seguir
 
-  1. Clona el proyecto en un directorio local
+  1. Clona el proyecto en un directorio local:
    
      ```
      cd directorio_local
      git clone https://github.com/VicentGN/plantapp
      ``` 
-  2. Accede al directorio que almacena el backend de la app y carga las dependencias. Arranca el servidor NodeJS.
+  2. Accede al directorio que almacena el backend de la app y carga las dependencias. Arranca el servidor NodeJS:
       ```
       cd plantapp/back
       npm i 
       npm run dev
       ```
-  3. Después vuelve a hacer lo mismo pero en el directorio front. Arranca ReactJS
+  3. Después vuelve a hacer lo mismo pero en el directorio front. Arranca ReactJS:
       ```
       cd plantapp/front
       npm i
       npm run serve
       ```
-  4. Abre el navegador y accede al localhost para visualizar la app
+  4. Abre el navegador y accede al localhost para visualizar la app.
 
 
 ## Uso
